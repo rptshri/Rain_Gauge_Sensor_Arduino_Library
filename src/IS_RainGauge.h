@@ -11,13 +11,32 @@
 	buy me a (root) beer someday.
 */
 
+//include guards - to make sure compiler ignores duplicates
 #ifndef IS_RainGuage_h
 #define IS_RainGuage_h
 
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
+
 class IS_RainGuage
 {
+public:
+	IS_RainGauge(); // base type
+
+	char whatIsCountTillNow(void);
+	//call this function to know the value count at that time
+	//returns count value.
+
+private:
+	int8_t _pin;
+	int _count;
 };
 
-#define variable values
+#define EEPROM_COUNT_ADDRESS 0
+//Change this definition if you want to use another interrupt pins
+#define INTERRUPT_PIN 2				
 
 #endif

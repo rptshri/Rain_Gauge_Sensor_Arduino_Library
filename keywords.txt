@@ -12,16 +12,12 @@ IS_RainGuage	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin	KEYWORD2
-startTemperature	KEYWORD2
-getTemperature	KEYWORD2
-startPressure	KEYWORD2
-getPressure	KEYWORD2
-sealevel	KEYWORD2
-altitude	KEYWORD2
+IncrementCount	KEYWORD2
+whatIsCountTillNow  KEYWORD2
+
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-BMP180_ADDR	LITERAL1
+EEPROM_COUNT_ADDRESS	LITERAL1
