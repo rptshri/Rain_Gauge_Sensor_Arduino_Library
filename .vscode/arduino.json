@@ -1,0 +1,8 @@
+{
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328",
+    "port": "COM12",
+    "programmer": "AVR ISP",
+    "sketch": "examples\\TippingCounterOnInterrupt\\Tipping_Count\\Tipping_Count.ino",
+    "output": "build-outputs"
+}
