@@ -27,7 +27,7 @@ IS_RainGuage::IS_RainGauge()
 	attachInterrupt(digitalPinToInterrupt(_pin), IncrementCount, RISING);
 }
 
-IS_RainGuage::IncrementCount()
+void IS_RainGuage::IncrementCount()
 //This function is called when Interrupt occurs
 //Increment the count value
 //write the count value to EEPROM

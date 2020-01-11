@@ -21,6 +21,8 @@
 #include "WProgram.h"
 #endif
 
+volatile static _count; 
+
 class IS_RainGuage
 {
 public:
@@ -31,8 +33,9 @@ public:
 	//returns count value.
 
 private:
+	static void IncrementCount();
+
 	int8_t _pin;
-	int _count;
 };
 
 #define EEPROM_COUNT_ADDRESS 0
