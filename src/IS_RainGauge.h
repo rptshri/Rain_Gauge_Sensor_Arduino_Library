@@ -14,28 +14,35 @@
 //include guards - to make sure compiler ignores duplicates
 #ifndef IS_RainGuage_h
 #define IS_RainGuage_h
-
-#if defined(ARDUINO) && ARDUINO >= 100
+// #include "Arduino.h"
+// #if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
+// #else
+// #include "WProgram.h"
+// #endif
+
+volatile static int _count;
+void IncrementCount(void);
+//This function gets called when interrupt occurs
+//increment and saves count in EEPROM 
 
 volatile static _count; 
 
 class IS_RainGuage
 {
 public:
-	IS_RainGauge(); // base type
+	int IS_RainGauge(); // base type
 
-	char whatIsCountTillNow(void);
+	int whatIsCountTillNow(void);
 	//call this function to know the value count at that time
 	//returns count value.
+	// void IncCount(void);
 
 private:
-	static void IncrementCount();
+	
 
 	int8_t _pin;
+	
 };
 
 #define EEPROM_COUNT_ADDRESS 0

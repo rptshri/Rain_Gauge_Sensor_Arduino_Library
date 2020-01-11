@@ -14,6 +14,7 @@ IS_RainGuage	KEYWORD1
 
 IncrementCount	KEYWORD2
 whatIsCountTillNow  KEYWORD2
+begin  KEYWORD2
 
 
 #######################################

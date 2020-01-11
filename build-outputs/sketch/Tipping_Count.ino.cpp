@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#line 1 "c:\\Users\\ARPIT\\Documents\\Arduino\\libraries\\Rain_Gauge_Sensor_Arduino_Library\\examples\\TippingCounterOnInterrupt\\Tipping_Count\\Tipping_Count.ino"
 /* IS_RainGauge Arduino example sketch
 
 This sketch shows how to use the Rain Gauge sensor.
@@ -31,11 +33,18 @@ V1.0.0 Arpit Shrivastava, Infiniti Systems 01/10/2020
 
 
 //Your sketch must include this library
-#include <IS_RainGauge.h>
+#include "IS_RainGauge.h"
+// #include <SoftwareSerial.h>
+// #include <EEPROM.h>
 
 //You will need to create an IS_RainGauge object here
-IS_RainGuage Rain();
+IS_RainGuage Rain;
 
+#line 41 "c:\\Users\\ARPIT\\Documents\\Arduino\\libraries\\Rain_Gauge_Sensor_Arduino_Library\\examples\\TippingCounterOnInterrupt\\Tipping_Count\\Tipping_Count.ino"
+void setup();
+#line 46 "c:\\Users\\ARPIT\\Documents\\Arduino\\libraries\\Rain_Gauge_Sensor_Arduino_Library\\examples\\TippingCounterOnInterrupt\\Tipping_Count\\Tipping_Count.ino"
+void loop();
+#line 41 "c:\\Users\\ARPIT\\Documents\\Arduino\\libraries\\Rain_Gauge_Sensor_Arduino_Library\\examples\\TippingCounterOnInterrupt\\Tipping_Count\\Tipping_Count.ino"
 void setup()
 {
     Serial.begin(9600);
@@ -46,3 +55,4 @@ void loop()
     Serial.println(Rain.whatIsCountTillNow());
     delay(2000);
 }
+
